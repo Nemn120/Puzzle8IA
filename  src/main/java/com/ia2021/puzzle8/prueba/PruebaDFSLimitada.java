@@ -12,20 +12,22 @@ public class PruebaDFSLimitada {
 
 		int[] a = {0, 8, 3, 2, 1, 4, 7, 6, 5};
 		EstadoPuzzleOcho tab01 = new EstadoPuzzleOcho(a);
-		int[] b = {1, 2, 3, 8, 0, 4, 7, 6, 5};//meta
-		EstadoPuzzleOcho tab02 = new EstadoPuzzleOcho(b);
-		int[] c = {1, 2, 3, 0, 8, 4, 7, 6, 5};
-		EstadoPuzzleOcho tab03 = new EstadoPuzzleOcho(c);
-		int[] d = {2, 8, 3, 1, 0, 4, 7, 5, 6};
-		EstadoPuzzleOcho tab04 = new EstadoPuzzleOcho(d);
-
-		System.out.println("Estado Inicial: ");
-		tab01.mostrarEstado();
-		NodoDeBusquedaLimitada inicio = new NodoDeBusquedaLimitada(tab01);
-		BusquedaDFSLimitada.buscar(inicio,true,6);//6
-
+		//int[] b = {1, 2, 3, 8, 0, 4, 7, 6, 5};//meta
+		//EstadoPuzzleOcho tab02 = new EstadoPuzzleOcho(b);
+		//int[] c = {1, 2, 3, 0, 8, 4, 7, 6, 5};
+		//EstadoPuzzleOcho tab03 = new EstadoPuzzleOcho(c);
+		//int[] d = {2, 8, 3, 1, 0, 4, 7, 5, 6};
+		//EstadoPuzzleOcho tab04 = new EstadoPuzzleOcho(d);
 
 		//META:	{1, 2, 3, 8, 0, 4, 7, 6, 5};
+		System.out.println("Estado Inicial: ");
+		tab01.mostrarEstado();
+		System.out.println();
+		NodoDeBusquedaLimitada inicio = new NodoDeBusquedaLimitada(tab01);
+		BusquedaDFSLimitada.buscar(inicio,true,3);//solucion : nivel = 6
+
+
+
     }
   
 }

@@ -138,6 +138,7 @@ public class BusquedaDFSLimitada
         }
 
         // No debería ocurrir nunca.
+        System.out.println();
         System.out.println("Error! Solución no encontrada!");
     }
 }
