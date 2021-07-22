@@ -67,34 +67,34 @@ public class BusquedaDFSLimitada
            if (!nodoTemp.getEstadoActual().esMeta() )
             {
 
-                if(nodoTemp.getNivel()<maxNivel){//-----------------------------
+                if(nodoTemp.getNivel()!=maxNivel){//-----------------------------
 
 
-                // generar los sucesores inmediatos a nodoTemp
-                ArrayList<Estado> sucesoresTemp = nodoTemp.getEstadoActual()
-                                .generarSucesores();
+                    // generar los sucesores inmediatos a nodoTemp
+                    ArrayList<Estado> sucesoresTemp = nodoTemp.getEstadoActual()
+                                    .generarSucesores();
 
-                /*
-                 * Iterar a través de los sucesores, envolverlo en un 
-                 * NodoDeBusqueda, revisar si ya fue evaluado, y si no
-                 * agregarlo a la cola.
-                 */
-                for (int i = sucesoresTemp.size()-1; i >= 0; i--)
-                {
-                    // segundo parametro que suma el costo del nuevo nodo al 
-                    // costo total actual en el NodoDeBusqueda
-                    NodoDeBusquedaLimitada nuevoNodo = new NodoDeBusquedaLimitada(nodoTemp,
-                        sucesoresTemp.get(i));
-
-                    if (!revisarRepetidos(nuevoNodo))
+                    /*
+                     * Iterar a través de los sucesores, envolverlo en un
+                     * NodoDeBusqueda, revisar si ya fue evaluado, y si no
+                     * agregarlo a la cola.
+                     */
+                    for (int i = sucesoresTemp.size()-1; i >= 0; i--)
                     {
-                            pila.add(nuevoNodo);
+                        // segundo parametro que suma el costo del nuevo nodo al
+                        // costo total actual en el NodoDeBusqueda
+                        NodoDeBusquedaLimitada nuevoNodo = new NodoDeBusquedaLimitada(nodoTemp,
+                            sucesoresTemp.get(i));
+
+                        if (!revisarRepetidos(nuevoNodo))
+                        {
+                                pila.add(nuevoNodo);
+                        }
                     }
+
                 }
-
-
                 contadorBusqueda++;
-                }
+
 
             }else
             // El estado meta se encontro. Imprimir el camino que lleva a este
@@ -121,6 +121,7 @@ public class BusquedaDFSLimitada
                 for (int i = 0; i < iteraciones; i++)
                 {
                     nodoTemp = caminoSolucion.pop();
+                    System.out.println("Solucion:");
                     nodoTemp.getEstadoActual().mostrarEstado();
                     System.out.println();
                     System.out.println();

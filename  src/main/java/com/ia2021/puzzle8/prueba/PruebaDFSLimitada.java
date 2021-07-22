@@ -14,13 +14,13 @@ public class PruebaDFSLimitada {
 		EstadoPuzzleOcho tab01 = new EstadoPuzzleOcho(a);
 		int[] b = {1, 2, 3, 8, 0, 4, 7, 6, 5};//meta
 		EstadoPuzzleOcho tab02 = new EstadoPuzzleOcho(b);
-		int[] c = {2, 8, 3, 1, 6, 4, 7, 0, 5};
+		int[] c = {1, 2, 3, 0, 8, 4, 7, 6, 5};
 		EstadoPuzzleOcho tab03 = new EstadoPuzzleOcho(c);
 		int[] d = {2, 8, 3, 1, 0, 4, 7, 5, 6};
 		EstadoPuzzleOcho tab04 = new EstadoPuzzleOcho(d);
 
 		NodoDeBusquedaLimitada inicio = new NodoDeBusquedaLimitada(tab01);
-		BusquedaDFSLimitada.buscar(inicio,true,3);//6
+		BusquedaDFSLimitada.buscar(inicio,true,6);//6
 
 
 		//META:	{1, 2, 3, 8, 0, 4, 7, 6, 5};
