@@ -118,12 +118,12 @@ public class BusquedaDFSLimitada
                 // El tamaño de la pila antes de iterarla y vaciarla.
                 int iteraciones = caminoSolucion.size();
 
+                System.out.println();
+                System.out.println("Solucion:");
                 for (int i = 0; i < iteraciones; i++)
                 {
                     nodoTemp = caminoSolucion.pop();
-                    System.out.println("Solucion:");
                     nodoTemp.getEstadoActual().mostrarEstado();
-                    System.out.println();
                     System.out.println();
                 }
                 //System.out.println("El costo fue: " + nodoTemp.getCosto());

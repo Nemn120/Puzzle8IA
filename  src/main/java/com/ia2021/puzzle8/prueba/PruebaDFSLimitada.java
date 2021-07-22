@@ -19,6 +19,8 @@ public class PruebaDFSLimitada {
 		int[] d = {2, 8, 3, 1, 0, 4, 7, 5, 6};
 		EstadoPuzzleOcho tab04 = new EstadoPuzzleOcho(d);
 
+		System.out.println("Estado Inicial: ");
+		tab01.mostrarEstado();
 		NodoDeBusquedaLimitada inicio = new NodoDeBusquedaLimitada(tab01);
 		BusquedaDFSLimitada.buscar(inicio,true,6);//6
 
