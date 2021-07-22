@@ -9,9 +9,7 @@ public class PruebaEstadoPuzzle8 {
     public static void main(String[] args) {
         int[] a = {7, 2, 4, 5, 0, 6, 8, 3, 1};
         EstadoPuzzleOcho tab01 = new EstadoPuzzleOcho(a);
-        System.out.println("Estado");
-        tab01.mostrarEstado();
-        System.out.println();
+
 //        System.out.println(tab01.getEspacio());
 //        
 //        int[] b = {5,0,4,6,1,8,7,3,2};
@@ -19,8 +17,8 @@ public class PruebaEstadoPuzzle8 {
 //        
 //        EstadoPuzzleOcho tab03 = new EstadoPuzzleOcho(a);
 //        
-//        int[] c = {1,2,3,8,0,4,7,6,5};
-//        EstadoPuzzleOcho tab04 = new EstadoPuzzleOcho(c);
+       int[] c = {1,2,3,8,0,4,7,6,5};
+       EstadoPuzzleOcho tab04 = new EstadoPuzzleOcho(c);
 //        
 //        System.out.println(tab01.igual(tab02));
 //        
@@ -34,6 +32,9 @@ public class PruebaEstadoPuzzle8 {
 //            System.out.print(x + " ");
 //        System.out.println("");
 
+        System.out.println("Estado");
+        tab01.mostrarEstado();
+        System.out.println();
         System.out.println("Sucesores\n");
         ArrayList<Estado> suc = tab01.generarSucesores();
         for (Estado x : suc) {
